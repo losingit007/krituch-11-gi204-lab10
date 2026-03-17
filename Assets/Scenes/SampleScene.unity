@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 212288684}
   - component: {fileID: 212288683}
   - component: {fileID: 212288682}
+  - component: {fileID: 212288685}
   m_Layer: 0
   m_Name: AirplaneRoot
   m_TagString: Untagged
@@ -205,6 +206,28 @@ Transform:
   - {fileID: 1036897717}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &212288685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212288681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6893ab7506f1a864b8b1b3a68157d3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Airplane
+  thrust: 40
+  liftCoefficient: 0.02
+  dragCoefficient: 0.02
+  sideDrag: 2
+  turnStrength: 0.5
+  stallAngle: 35
+  stallLiftMultiplier: 0.3
+  pitchPower: 15
+  rollPower: 20
+  yawPower: 15
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88321b0366cc97a40977c8e6612f0952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  target: {fileID: 0}
+  target: {fileID: 212288684}
   offset: {x: 0, y: 3, z: -8}
   smoothSpeed: 5
 --- !u!1 &410087039
